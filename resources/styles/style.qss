@@ -1,0 +1,76 @@
+QMainWindow, QDialog {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+}
+QWidget {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Segoe UI', 'PingFang SC', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+}
+QPushButton {
+    background-color: #333333;
+    border: 1px solid #444444;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+QPushButton:hover {
+    background-color: #444444;
+}
+QPushButton:pressed {
+    background-color: #555555;
+}
+QListWidget, QTextEdit, QLineEdit, QComboBox {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    color: #cccccc;
+    selection-background-color: #094771;
+}
+QMenuBar {
+    background-color: #333333;
+    color: #cccccc;
+}
+QMenuBar::item:selected {
+    background-color: #444444;
+}
+QStatusBar {
+    background-color: #007acc;
+    color: white;
+}
+QFileDialog {
+    background-color: #1e1e1e;
+}
+
+/* Dark scrollbar for dark theme */
+QScrollBar:vertical {
+    border: none;
+    background: #252526;
+    width: 12px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #424242;
+    min-height: 20px;
+    border-radius: 6px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #4f4f4f;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+QScrollBar:horizontal {
+    border: none;
+    background: #252526;
+    height: 12px;
+}
+QScrollBar::handle:horizontal {
+    background: #424242;
+    min-width: 20px;
+    border-radius: 6px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: #4f4f4f;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0;
+}
