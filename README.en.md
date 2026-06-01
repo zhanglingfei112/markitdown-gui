@@ -7,7 +7,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/zhanglingfei112/markitdown-gui)](https://github.com/zhanglingfei112/markitdown-gui)
 [![CI](https://github.com/zhanglingfei112/markitdown-gui/actions/workflows/build.yml/badge.svg)](https://github.com/zhanglingfei112/markitdown-gui/actions/workflows/build.yml)
 
-> [🇨🇳 中文](./README.zh-CN.md) | 🇬🇧 English
+> [🇨🇳 中文](./README.md) | 🇬🇧 English
 
 **MarkItDown GUI** is a desktop graphical client for Microsoft's official [`markitdown`](https://github.com/microsoft/markitdown) engine. It transforms complex command-line conversion operations into a simple drag-and-drop interface, allowing you to quickly convert various document formats into high-quality Markdown.
 

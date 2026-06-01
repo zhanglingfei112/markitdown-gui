@@ -7,99 +7,99 @@
 [![GitHub stars](https://img.shields.io/github/stars/zhanglingfei112/markitdown-gui)](https://github.com/zhanglingfei112/markitdown-gui)
 [![CI](https://github.com/zhanglingfei112/markitdown-gui/actions/workflows/build.yml/badge.svg)](https://github.com/zhanglingfei112/markitdown-gui/actions/workflows/build.yml)
 
-> 🇨🇳 [中文](./README.zh-CN.md) | 🇬🇧 English
+> 🇨🇳 中文 | [🇬🇧 English](./README.en.md)
 
-**MarkItDown GUI** is a desktop graphical client for Microsoft's official [`markitdown`](https://github.com/microsoft/markitdown) engine. It transforms complex command-line conversion operations into a simple drag-and-drop interface, allowing you to quickly convert various document formats into high-quality Markdown.
+**MarkItDown GUI** 是微软官方 [`markitdown`](https://github.com/microsoft/markitdown) 引擎的本地图形化客户端。它将复杂的命令行操作转化为简单直观的拖拽式界面，让您可以快速将各种文档格式转换为高质量的 Markdown。
 
-## ✨ Features
+## ✨ 功能特性
 
-- **📄 Multi-format Support** — PDF, DOCX, XLSX, PPTX, HTML, CSV, JSON, XML, EPUB, images, audio, and more (20+ formats)
-- **🎯 Drag-and-Drop** — Drag files directly into the interface; no commands needed
-- **⚡ Batch Processing** — Import entire folders; convert hundreds of files at once
-- **👁️ Real-time Preview** — Built-in dark-theme Markdown preview panel
-- **🌐 Bilingual Interface** — Seamless switch between Chinese and English
-- **💾 Flexible Export** — Save as `.md` files or batch export to directory
-- **🧵 Non-blocking** — Background thread conversion keeps UI responsive
-- **🔧 Configurable** — Custom output directory, interface language, and optional LLM API for image/audio enhancement
+- **📄 多格式支持** — PDF、DOCX、XLSX、PPTX、HTML、CSV、JSON、XML、EPUB、图片、音频等 20+ 种格式
+- **🎯 拖拽转换** — 直接将文件拖入界面，无需输入任何命令
+- **⚡ 批量处理** — 支持导入整个文件夹，一次性批量转换
+- **👁️ 实时预览** — 内置暗色主题 Markdown 预览面板
+- **🌐 双语界面** — 中文/English 即时切换
+- **💾 灵活导出** — 保存为 `.md` 文件或批量导出到指定目录
+- **🧵 后台转换** — 后台线程处理，界面不卡顿
+- **🔧 可配置** — 自定义输出目录、界面语言、可选的 LLM API（用于图片/音频增强）
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-### Prerequisites
+### 前置条件
 
-- Python 3.10 or higher
-- `pip` or `uv` package manager
+- Python 3.10 或更高版本
+- `pip` 或 `uv` 包管理器
 
-### Installation
+### 安装步骤
 
 ```bash
-# Clone the repository
+# 克隆项目
 git clone https://github.com/zhanglingfei112/markitdown-gui.git
 cd markitdown-gui
 
-# Install dependencies (using uv — recommended)
+# 使用 uv 安装依赖 (推荐)
 uv pip install .
 
-# Or using pip
+# 或使用 pip
 pip install .
 ```
 
-### Usage
+### 使用方式
 
 ```bash
-# Launch the application
+# 启动应用
 python -m markitdown_gui.main
 ```
 
-1. **Import files** — Drag and drop files into the left panel, or use `File > Open File/Folder`
-2. **Convert** — Click "Start Conversion"; files are processed in background threads
-3. **Preview** — Click completed items in the list to see Markdown output
-4. **Export** — Click "Export" to save `.md` files to your output directory
+1. **导入文件** — 将文件拖入左侧面板，或通过 `文件 > 打开文件/文件夹`
+2. **执行转换** — 点击"开始转换"，后台线程处理，界面不卡顿
+3. **预览结果** — 点击列表中的已完成文件，右侧查看 Markdown 内容
+4. **导出文件** — 点击"导出"将转换结果保存到本地
 
-## 🖼️ Screenshots
+## 🖼️ 界面截图
 
-> *Screenshots coming soon — contributions welcome!*
+> *截图待补充 — 欢迎贡献！*
 
-## ⚙️ Configuration
+## ⚙️ 设置项
 
-| Setting | Description |
+| 设置 | 说明 |
 |---|---|
-| **Language** | Switch between 中文/English via `Settings > Language` menu |
-| **Output Directory** | Default save location for converted `.md` files |
-| **OCR/LLM Enhancement** | Enable AI-powered image and audio conversion (requires API key) |
+| **界面语言** | 通过 `设置 > 语言` 菜单在中文/English 间切换 |
+| **输出目录** | 转换后 `.md` 文件的默认保存位置 |
+| **OCR/LLM 增强** | 启用 AI 图片和音频转换（需配置 API Key） |
 
-## 📁 Project Structure
+## 📁 项目结构
 
 ```
 markitdown-gui/
 ├── markitdown_gui/
-│   ├── main.py           # Application entry point
+│   ├── main.py               # 应用程序入口
 │   ├── app/
-│   │   ├── main_window.py  # Main window UI and logic
-│   │   ├── settings.py     # Configuration management
-│   │   └── worker.py       # Background conversion thread
+│   │   ├── main_window.py    # 主窗口 UI 与逻辑
+│   │   ├── settings.py       # 配置管理
+│   │   └── worker.py         # 后台转换线程
 │   ├── ui/
-│   │   ├── drop_area.py    # Drag-and-drop zone
-│   │   ├── file_list.py    # File list widget
-│   │   ├── preview.py      # Markdown preview panel
-│   │   └── settings_dialog.py  # Settings dialog
+│   │   ├── drop_area.py      # 拖拽放置区域
+│   │   ├── file_list.py      # 文件列表组件
+│   │   ├── preview.py        # Markdown 预览面板
+│   │   └── settings_dialog.py # 设置对话框
 │   ├── utils/
-│   │   └── converter.py    # MarkItDown engine wrapper
-│   └── i18n/               # Internationalization files
-├── resources/styles/       # QSS stylesheets
-├── tests/                  # Unit tests
-└── pyproject.toml          # Project metadata
+│   │   └── converter.py      # MarkItDown 引擎封装
+│   └── i18n/                 # 国际化语言包
+├── resources/styles/         # QSS 样式表
+├── tests/                    # 单元测试
+└── pyproject.toml            # 项目元数据
 ```
 
-## 🧪 Running Tests
+## 🧪 运行测试
 
 ```bash
 python -m unittest tests.test_converter -v
 ```
 
-## 🤝 Contributing
+## 🤝 贡献指南
 
-Contributions are welcome! Feel free to open [issues](https://github.com/zhanglingfei112/markitdown-gui/issues) or submit pull requests.
+欢迎贡献代码和提交 [Issue](https://github.com/zhanglingfei112/markitdown-gui/issues)！
 
-## 📄 License
+## 📄 许可证
 
-This project is licensed under the [MIT License](./LICENSE).
+本项目采用 [MIT License](./LICENSE) 协议。
