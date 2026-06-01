@@ -1,14 +1,39 @@
 [project]
 name = "markitdown-gui"
 version = "0.1.0"
-description = "MarkItDown 桌面图形客户端 - 将各类文档转换为 Markdown 格式"
+description = "A desktop GUI wrapper for Microsoft MarkItDown - convert files to Markdown with drag-and-drop"
 readme = "README.md"
 license = {text = "MIT"}
+authors = [
+    {name = "zhanglingfei112", email = "zhanglingfei112@users.noreply.github.com"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Simplified)",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing :: Markdown",
+    "Topic :: Utilities",
+]
+keywords = ["markitdown", "markdown", "converter", "gui", "pyside6", "qt", "document-conversion"]
+requires-python = ">=3.10"
 dependencies = [
     "PySide6>=6.6.0",
     "markitdown>=0.1.0",
 ]
-requires-python = ">=3.10"
+
+[project.urls]
+Homepage = "https://github.com/zhanglingfei112/markitdown-gui"
+Repository = "https://github.com/zhanglingfei112/markitdown-gui"
+BugTracker = "https://github.com/zhanglingfei112/markitdown-gui/issues"
+Documentation = "https://github.com/zhanglingfei112/markitdown-gui#readme"
 
 [build-system]
 requires = ["setuptools>=61.0"]

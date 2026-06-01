@@ -6,6 +6,7 @@ from markitdown_gui.ui.preview import PreviewArea
 from markitdown_gui.ui.settings_dialog import SettingsDialog
 from markitdown_gui.app.worker import ConvertWorker
 from markitdown_gui.app.settings import Settings
+from markitdown_gui import __version__
 from PySide6.QtWidgets import QPushButton
 
 class MainWindow(QMainWindow):
@@ -279,7 +280,8 @@ class MainWindow(QMainWindow):
         self.texts = texts  # 存储供 start_conversion 等方法使用
         
         # 窗口标题
-        self.setWindowTitle(texts.get("app_title", "MarkItDown GUI"))
+        title = texts.get("app_title", "MarkItDown GUI")
+        self.setWindowTitle(f"{title} v{__version__}")
         
         # 按钮
         self.convert_btn.setText(texts.get("btn_convert", "Start Conversion"))

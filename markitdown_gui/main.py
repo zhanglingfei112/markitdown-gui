@@ -2,6 +2,7 @@ import sys
 import json
 from pathlib import Path
 from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
+from markitdown_gui import __version__
 from markitdown_gui.app.main_window import MainWindow
 from markitdown_gui.app.settings import Settings
 

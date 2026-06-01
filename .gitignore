@@ -21,3 +21,9 @@ Thumbs.db
 build/
 dist/
 *.spec
+
+# Review/test scripts (not application code)
+review_*.py
+kimi_k26_review*.py
+qwen37_final_review.py
+test_*.py
